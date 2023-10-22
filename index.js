@@ -81,8 +81,8 @@ function detectError(arr, nr) {
     let val = 0
 
     for (let j = 1; j < n + 1; j++) {
-      if (j & (2 ** i) == (2 ** i)) {
-        val = val ^ Number(arr[-1 * j])
+      if ((j & (2 ** i)) === (2 ** i)) {
+        val = val ^ Number(arr.at(-1 * j))
       }
     }
 
@@ -98,7 +98,6 @@ function detectError(arr, nr) {
 function len(data) {
   return data.length
 }
-
 
 // Enter the data to be transmitted
 const data = "1011001"
